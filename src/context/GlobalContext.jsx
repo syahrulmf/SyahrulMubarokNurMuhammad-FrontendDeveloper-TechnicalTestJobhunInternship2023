@@ -8,7 +8,9 @@ export const GlobalProvider = (props) => {
 
   const getMovies = async () => {
     try {
-      const res = await axios.get(`http://api.tvmaze.com/search/shows?q=girls`);
+      const res = await axios.get(
+        `https://api.tvmaze.com/search/shows?q=girls`
+      );
       setData(res.data);
     } catch (err) {
       console.log(err);
